@@ -12,6 +12,15 @@ const UseEffect = () => {
   useEffect(() => {
     document.title = name + " " + surname;
   });
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
   return (
     <div className="container">
       <div className="title">
@@ -36,6 +45,14 @@ const UseEffect = () => {
             by default useEffect render in the first instant and whenever the
             state changes
           </li>
+          <li>
+            like state we can use useEffect more than once to perform diffferent
+            side-effects
+          </li>
+          <li>
+            to clean-up this effect, it optionally return the function, react
+            will use this function to clean-up the function{" "}
+          </li>
         </ul>
       </div>
       <div className="demo">
@@ -45,6 +62,7 @@ const UseEffect = () => {
           <input value={surname} onChange={handleSurnameChange} />
           {surname}
         </section>
+        <p>window width: {windowSize}</p>
       </div>
     </div>
   );

@@ -6,6 +6,8 @@
   margin: auto;
   width: 80%;
   border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
 }
 .title {
   border: 1px solid red;
