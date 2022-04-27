@@ -29,3 +29,15 @@ p {
   margin: 0 auto;
   align-self: f;
 }
+.btn {
+  background-color: blue;
+  color: white;
+  width: 50px;
+}
+.btn-dlt {
+  background-color: red;
+  color: white;
+  width: 50px;
+  border-radius: 20%;
+  margin: 1px auto;
+}
