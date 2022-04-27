@@ -7,7 +7,7 @@
   width: 80%;
   border-radius: 5px;
   padding: 10px;
-  margin: 20px;
+  margin: 20px auto;
 }
 .title {
   border: 1px solid red;
@@ -27,4 +27,5 @@
 h1,
 p {
   margin: 0 auto;
+  align-self: f;
 }
