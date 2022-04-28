@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const inititalState = { firstname: "", lastname: "" };
+const inititalState = { firstname: "", lastname: "", email: "" };
 export const FormComponent = () => {
   const [formData, setformData] = useState(inititalState);
 
@@ -10,8 +10,8 @@ export const FormComponent = () => {
         [e.target.name]: e.target.value,
       };
     });
-    console.log(formData);
   };
+  console.log(formData);
   return (
     <div>
       <input
@@ -24,6 +24,13 @@ export const FormComponent = () => {
         type="text"
         placeholder="first-name"
         name="lastname"
+        onChange={handleChange}
+      />
+      <input
+        type="email"
+        required
+        placeholder="email@"
+        name="email"
         onChange={handleChange}
       />
     </div>
