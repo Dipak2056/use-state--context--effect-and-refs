@@ -1,6 +1,11 @@
 import React from "react";
 
-const BadList = ({ badList }) => {
+const BadList = ({
+  badList,
+  handleOnMoveToGood,
+  handleOnDeleteBadList,
+  totalBadHours,
+}) => {
   return (
     <div>
       <h1>Bad-list</h1>
@@ -16,14 +21,22 @@ const BadList = ({ badList }) => {
                 </td>
                 <td>{item.hr}</td>
                 <td>
-                  <div className="btn">Move</div>
-                  <div className="btn-dlt">Delete</div>
+                  <div className="btn" onClick={() => handleOnMoveToGood(i)}>
+                    Move
+                  </div>
+                  <div
+                    className="btn-dlt"
+                    onClick={() => handleOnDeleteBadList(i)}
+                  >
+                    Delete
+                  </div>
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
+      <p>you could have saved {totalBadHours}</p>
     </div>
   );
 };

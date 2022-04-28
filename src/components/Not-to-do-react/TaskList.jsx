@@ -1,6 +1,6 @@
 import React from "react";
 
-const TaskList = ({ taskList, handleOnMoveToBad }) => {
+const TaskList = ({ taskList, handleOnDeleteTaskList, handleOnMoveToBad }) => {
   return (
     <div>
       <h1>Task-list</h1>
@@ -16,10 +16,15 @@ const TaskList = ({ taskList, handleOnMoveToBad }) => {
                 </td>
                 <td>{item.hr}</td>
                 <td>
-                  <div className="btn" onClick={handleOnMoveToBad}>
+                  <div className="btn" onClick={() => handleOnMoveToBad(i)}>
                     Move
                   </div>
-                  <div className="btn-dlt">Delete</div>
+                  <div
+                    className="btn-dlt"
+                    onClick={() => handleOnDeleteTaskList(i)}
+                  >
+                    Delete
+                  </div>
                 </td>
               </tr>
             );
