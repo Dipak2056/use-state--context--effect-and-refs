@@ -4,6 +4,7 @@ import { UseState } from "./components/UseState";
 import UseContext from "./components/UseContext";
 import UseEffect from "./components/UseEffect";
 import ParentComponent from "./components/Not-to-do-react/ParentComponent";
+import { FormComponent } from "./components/Form/FormComponent";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <UseState />
       <UseContext />
       <UseEffect /> */}
-      <ParentComponent />
+      {/* <ParentComponent /> */}
+      <FormComponent />
     </div>
   );
 }
