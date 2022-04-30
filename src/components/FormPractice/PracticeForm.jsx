@@ -15,6 +15,12 @@ const PracticeForm = () => {
   };
   function handleSubmit(e) {
     e.preventDefault();
+    if (formData.password !== formData.confirmPassword) {
+      return alert("password didnot matched");
+    }
+    if (formData.join === true) {
+      console.log("Thanks for joining us");
+    }
     console.log(formData);
   }
   return (
