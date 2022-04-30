@@ -5,6 +5,7 @@ import UseContext from "./components/UseContext";
 import UseEffect from "./components/UseEffect";
 import ParentComponent from "./components/Not-to-do-react/ParentComponent";
 import { FormComponent } from "./components/Form/FormComponent";
+import PracticeForm from "./components/FormPractice/PracticeForm";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <UseContext />
       <UseEffect /> */}
       {/* <ParentComponent /> */}
-      <FormComponent />
+      {/* <FormComponent /> */}
+      <PracticeForm />
     </div>
   );
 }
