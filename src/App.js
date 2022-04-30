@@ -6,6 +6,7 @@ import UseEffect from "./components/UseEffect";
 import ParentComponent from "./components/Not-to-do-react/ParentComponent";
 import { FormComponent } from "./components/Form/FormComponent";
 import PracticeForm from "./components/FormPractice/PracticeForm";
+import RoutingPage from "./components/Router/RoutingPage";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <UseEffect /> */}
       {/* <ParentComponent /> */}
       {/* <FormComponent /> */}
-      <PracticeForm />
+      {/* <PracticeForm /> */}
+      <RoutingPage />
     </div>
   );
 }
