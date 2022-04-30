@@ -1,11 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Pagenotfound() {
   let navigate = useNavigate();
+  let { username } = useParams();
   return (
     <div>
-      404: Pagenotfound
+      <h1>This is the profile page for {username}</h1>
       <button
         onClick={() => {
           navigate("/");

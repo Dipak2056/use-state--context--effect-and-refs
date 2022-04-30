@@ -15,8 +15,8 @@ const RoutingPage = () => {
       </nav>
       <Routes>
         <Route path="/" element={<FormComponent />} />
-        <Route path="/practice" element={<PracticeForm />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/practice/" element={<PracticeForm />} />
+        <Route path="/home/:username" element={<Home />} />
         <Route path="*" element={<Pagenotfound />} />
       </Routes>
     </Router>
